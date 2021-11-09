@@ -1,4 +1,11 @@
-CREATE SCHEMA IF NOT EXISTS `detoni` DEFAULT CHARACTER SET utf8;
+-- -----------------------------------------------------
+-- Link GitHub: https://github.com/joaodetoni77/MER-Joao-Vitor-Detoni.git
+-- Link Drive/Draw.io: https://drive.google.com/file/d/1-VJEJ4uBGxF6-OEPntpNyksyrXbr6pS-/view?usp=sharing
+
+-- -----------------------------------------------------
+
+DROP DATABASE IF EXISTS `detoni`;
+CREATE SCHEMA `detoni` DEFAULT CHARACTER SET utf8;
 USE `detoni`;
 
 -- -----------------------------------------------------
