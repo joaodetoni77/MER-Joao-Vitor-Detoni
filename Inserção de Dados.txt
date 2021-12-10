@@ -1,0 +1,314 @@
+-- -----------------------------------------------------
+-- Link GitHub: https://github.com/joaodetoni77/MER-Joao-Vitor-Detoni.git
+-- Link Drive/Draw.io: https://drive.google.com/file/d/1-VJEJ4uBGxF6-OEPntpNyksyrXbr6pS-/view?usp=sharing
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Tabela `Escola`
+-- -----------------------------------------------------
+INSERT INTO `Escola`(`id`, `nome`, `cnpj`) VALUES 
+(1, 'Intituto Federal do Paraná', '72.037.396/0001-52'), 
+(2, 'Universidade Tecnológica Federal do Paraná', '98.106.256/0001-82'),
+(3, 'Universidade Estadual do Oeste do Paraná', '35.063.280/0001-61'), 
+(4, 'Universidade Estadual de Londrina', '84.782.423/0001-09'),
+(5, 'Universidade Estadual de Maringá', '75.353.811/0001-75'),
+(6, 'Universidade de São Paulo', '27.723.419/0001-28'),
+(7, 'Universidade Federal de Santa Catarina', '12.802.615/0001-10'),
+(8, 'Universidade Cruzeiro do Sul', '56.427.591/0001-32'),
+(9, 'Universidade Federal do Paraná', '73.687.455/0001-09'),
+(10, 'Universidade Federal do Rio de Janeiro', '62.593.519/0001-88');
+
+-- -----------------------------------------------------
+-- Tabela `Cargo`
+-- -----------------------------------------------------
+INSERT INTO `Cargo`(`id`, `nome`, `descricao`) VALUES 
+(1, 'Diretor', 'Gerenciar toda a instituição'), 
+(2, 'Vice-Diretor', 'Auxiliar o Diretor'),
+(3, 'Diretora', 'Gerenciar toda a instituição'), 
+(4, 'Vice-Diretora', 'Auxiliar a diretora'),
+(5, 'Coordenador', 'Prestar suportes escolares'),
+(6, 'Vice Coordenador', 'Auxiliar o coordenador'),
+(7, 'Coordenadora', 'Prestar suportes escolares'),
+(8, 'Vice Coordenadora', 'Auxiliar a coordenadora'),
+(9, 'Secretaria', 'Realizar a organização das atividades escolares'),
+(10, 'Vice Secretaria', 'Auxiliar a secretaria'),
+(11, 'Secretario', 'Realizar a organização das atividades escolares'),
+(12, 'Vice Secretariao', 'Auxiliar o secretario'),
+(13, 'Pedagoga', 'Auxiliar na formação dos estudantes'),
+(14, 'Pedagogo', 'Auxiliar na formação dos estudantes');
+
+-- -----------------------------------------------------
+-- Tabela `Direcao`
+-- -----------------------------------------------------
+INSERT INTO `Direcao`(`id`, `nome`, `salario`, `Escola_id`, `Cargo_id`) VALUES 
+(1, 'Dara Grande Flores', 2500.50, 2, 5), 
+(2, 'Otília Bouça Laranjeira', 3240.78, 4, 4),
+(3, 'Riana Freire Pimentel', 2800.00, 1, 7), 
+(4, 'Avelino Madureira Monforte', 1895.48, 3, 3),
+(5, 'Bela Cachoeira Sobral', 4000.00, 6, 2),
+(6, 'Stephanie da Silva', 4200.00, 5, 1),
+(7, 'Jaime Guedes Diegues', 3600.000, 7, 6),
+(8, 'Noa Sandinha Jamandas', 1950.00, 10, 9),
+(9, 'Enoque Cesário Bastos', 2390.67, 9, 8),
+(10, 'Jessé Barros Barateiro', 2200.50, 8, 10);
+
+-- -----------------------------------------------------
+-- Tabela `Curso`
+-- -----------------------------------------------------
+INSERT INTO `Curso`(`id`, `nome`, `carga_horaria`) VALUES 
+(1, 'Técnico em Informática', 3300), 
+(2, 'Ciência da Computação', 3225),
+(3, 'Farmácia', 4000), 
+(4, 'Administração', 3000),
+(5, 'Agronomia', 3600),
+(6, 'Nutrição', 4000),
+(7, 'Sistemas de Informação', 3600),
+(8, 'Fisioterapia', 4000),
+(9, 'Ciências Biológicas', 2700),
+(10, 'Astronomia', 2820);
+
+-- -----------------------------------------------------
+-- Tabela `Aluno`
+-- -----------------------------------------------------
+INSERT INTO `Aluno`(`id`, `nome`, `cpf`) VALUES 
+(1, 'João Vitor Detoni', '320.828.620-11'), 
+(2, 'Ayrton Cunha Ferreira', '572.274.190-61'),
+(3, 'Caio Luiz Dos Santos', '268.395.090-01'), 
+(4, 'Geovana Figueiredo Silva', '929.021.530-58'),
+(5, 'Joao Victor Salvi Silva', '959.390.080-20'),
+(6, 'Isaac Santana de Almeida', '484.087.060-80'),
+(7, 'Beatriz Silva Souza', '012.773.920-30'),
+(8, 'Daniel Augusto Da Silva', '364.777.980-69'),
+(9, 'Breno Farias da Silva', '594.615.480-01'),
+(10, 'Thiago Roberto Jacomo', '871.450.820-63');
+
+-- -----------------------------------------------------
+-- Tabela `Matricula`
+-- -----------------------------------------------------
+INSERT INTO `Matricula`(`id`, `numero`, `data_cadastro`, `Curso_id`, `Aluno_id`) VALUES 
+(1, 2304368, '2021-01-01', 1, 3), 
+(2, 4562846, '2021-08-21', 3, 1),
+(3, 1457512, '2019-04-11', 5, 7), 
+(4, 3884456, '2012-12-12', 7, 6),
+(5, 5568623, '2015-11-27', 8, 9),
+(6, 6789505, '2013-07-08', 9, 8),
+(7, 7854223, '2010-03-01', 2, 5),
+(8, 8956421, '2021-05-12', 6, 2),
+(9, 9145864, '2020-10-31', 10, 4),
+(10, 8972462, '2005-02-28', 4, 10);
+
+-- -----------------------------------------------------
+-- Tabela `Professor`
+-- -----------------------------------------------------
+INSERT INTO `Professor`(`id`, `nome`, `salario`) VALUES 
+(1, 'Juliano Henrique Foleiss', '3500.00'), 
+(2, 'Igor Scaliante Wiese', '5000.00'),
+(3, 'Lucio Geronimo Valentin', '4200.00'), 
+(4, 'Andre Luis Schwerz', '4500.00'),
+(5, 'Luiz Arthur Feitosa Dos Santos', '3800.00'),
+(6, 'Wellington Jose Correa', '7000.00'),
+(7, 'Frederico Lopes de Oliveira Diehl', '5500.00'),
+(8, 'Marcos Silvano', '6000.00'),
+(9, 'Marcelo Guelbert', '5200.00'),
+(10, 'Angela Maria Gozzo', '4800.00');
+
+-- -----------------------------------------------------
+-- Tabela `Turma`
+-- -----------------------------------------------------
+INSERT INTO `Turma`(`id`, `codigo_identificacao`, `vagas`) VALUES 
+(1, 123456, 50), 
+(2, 235798, 35),
+(3, 347994, 40), 
+(4, 314586, 20),
+(5, 497553, 60),
+(6, 687521, 30),
+(7, 954552, 25),
+(8, 745980, 40),
+(9, 568754, 45),
+(10, 427546, 55);
+
+-- -----------------------------------------------------
+-- Tabela `detoni`.`Disciplina`
+-- -----------------------------------------------------
+INSERT INTO `Disciplina`(`id`, `nome`, `carga_horaria`, `id_disciplina`) VALUES 
+(1, 'Banco de Dados 1', 90, null), 
+(2, 'Banco de Dados 2', 90, 1),
+(3, 'Redes 1', 80, null), 
+(4, 'Redes 2', 80, 3),
+(5, 'Química Geral', 75, null),
+(6, 'Química Analítica', 75, 5),
+(7, 'Finanças', 90, null),
+(8, 'Pesquisa de mercado', 90, 7),
+(9, 'Genética ', 80, null),
+(10, 'Microbiologia', 75, 9), 
+(11, 'Avaliação Nutricional', 60, null),
+(12, 'Nutrição no Esporte', 65, 11),
+(13, 'Anatomia', 90, null),
+(14, 'Desenvolvimento Humano', 65, 13),
+(15, 'Física', 50, null),
+(16, 'Cálculo Diferencial e Integral', 50, 15);
+
+-- -----------------------------------------------------
+-- Tabela `Projeto`
+-- -----------------------------------------------------
+INSERT INTO `Projeto`(`id`, `nome`, `resumo`, `Professor_id`) VALUES 
+(1, 'Esporte na Educação', 'Desenvolver técnicas que incentivem a aplicação de esporte para educação', 1), 
+(2, 'Programação para Iniciantes', 'Estimular o aprendizado de programação de computadores para pessoas com baixa idade', 2),
+(3, 'Trilha Ecológica', 'Criar e manter um ambiente em meio a mata, com várias atrações que estimulem participação' , 3), 
+(4, 'Problemas de Redes de Computadores', 'Destinado a levantar quais são os problemas de redes de computadores, bem como apontar soluções', 4),
+(5, 'Célula Educativa', 'Pessoas se reunem, montando uma empresa e aplicando boas ações dentro do ambiente social', 5),
+(6, 'Levantamento Histórico Local', 'Buscar fontes antigas e fazer um levantamento histórico com imagens e textos do local onde habitam', 6),
+(7, 'Vacinômetro', 'Mostrar a importância que as vacinas possuem para toda e qualquer pessoa, estimulando os seres humanos a se manterem atualizados', 7),
+(8, 'Levantamento de PH', 'Verificar os comportamentos de PH em diferentes ambientes, evidenciando coisas boas e ruins', 8),
+(9, 'Estufa Ecológica', 'Desenvolver um ambiente todo automatizado, que garante total controle do que existir dentro de uma estufa', 9),
+(10, 'Controle Ecológico', 'Mostrar a importância que o controle ecológico tem para o mundo em que vivemos', 10);
+
+-- -----------------------------------------------------
+-- Tabela `Anotacao`
+-- -----------------------------------------------------
+INSERT INTO `Anotacao`(`id`, `titulo`, `descricao`, `Disciplina_id`, `Aluno_id`) VALUES 
+(1, 'Comandos SQL', 'São os termos responsáveis, por exemplo, pela criação de tabelas e inserção de dados nas mesmas', 1, 1), 
+(2, 'Camada Física', 'Responsável pela transmissão binária', 3, 2),
+(3, 'Objetivo', 'Estudar conteúdos gerais da química, como por exemplo, elementos químicos' , 5, 3), 
+(4, 'Interesse', 'Levantar informações relacionadas com o mercado-alvo', 8, 4),
+(5, 'Atuação', 'Estudar os genes e a variação genética', 9, 5),
+(6, 'Relação', 'Encontro entre educação física e nutrição', 12, 6),
+(7, 'Estudo', 'Estrutura do corpo humano', 13, 7),
+(8, 'Definição', 'Desenvolvimento mental e orgânico', 14, 8),
+(9, 'Leis da Física', 'Enunciado de uma verdade científica', 15, 9),
+(10, 'Aplicação das Derivadas', 'Matemática, Física e Economia', 16, 10);
+
+-- -----------------------------------------------------
+-- Tabela `Categoria`
+-- -----------------------------------------------------
+INSERT INTO `Categoria`(`id`, `nome`, `descricao`) VALUES 
+(1, 'Prova', 'Avaliação para medir o conhecimento dos estudantes'), 
+(2, 'Sondagem', 'Questionários para verificar nível dos estudantes'),
+(3, 'Resenha', 'Estudar e opinar sobre algum assunto'), 
+(4, 'Resumo', 'Estudar e expor ideias sobre um assunto'),
+(5, 'Relatório', 'Descrever a situação geral de alguma coisa'),
+(6, 'Artigo Científico', 'Documento de descrição de alguma pesquisa científica'),
+(7, 'Fichamento', 'Material produzido após a realização de leituras'),
+(8, 'Trabalho de Conclusão de Curso', 'Documentação produzida por estudantes, com descrições sobre algum assunto'),
+(9, 'Redação', 'Descrições realizadas sobre algum tema pré-estabelecido'),
+(10, 'Outro trabalho', 'Qualquer outra categoria de trabalho');
+
+-- -----------------------------------------------------
+-- Tabela `Avaliacao`
+-- -----------------------------------------------------
+INSERT INTO `Avaliacao`(`id`, `descricao`, `nota`, `Disciplina_id`, `Aluno_id`, `Categoria_id`) VALUES 
+(1, 'Prova de Banco de Dados', 8.5, 1, 2, 1), 
+(2, 'Sondagem de Redes', 10.0, 3, 1, 2),
+(3, 'Resenha de Química Geral', 5.0 , 5, 4, 3), 
+(4, 'Resumo de Finanças', 7.5 , 7, 3, 4),
+(5, 'Relatório de Genética', 0.0 , 9, 6, 5),
+(6, 'Artigo de Microbiologia', 6.3, 10, 5, 6),
+(7, 'Fichamento de Nutrição no Esporte', 3.8 , 12, 8, 7),
+(8, 'TCC de Anatomia', 8.6 , 13, 7, 8),
+(9, 'Redação Desenvolvimento Humano', 0.5 , 14, 10, 9),
+(10, 'Desenho de Física', 10.0, 15, 9, 10);
+
+-- -----------------------------------------------------
+-- Tabela `Projeto_has_Aluno`
+-- -----------------------------------------------------
+INSERT INTO `Projeto_has_Aluno`(`Projeto_id`, `Aluno_id`, `data_entrada`) VALUES 
+(1, 3, '2020-03-05'), 
+(2, 4, '2021-12-01'),
+(3, 2, '2015-10-30'), 
+(4, 1, '2018-01-28'),
+(5, 10, '2019-07-02'),
+(6, 7, '2017-04-05'),
+(7, 5, '2012-02-28'),
+(8, 6, '2013-05-12'),
+(9, 9, '2021-08-22'),
+(10, 8, '2021-11-27');
+
+-- -----------------------------------------------------
+-- Tabela `Disciplina_has_Turma`
+-- -----------------------------------------------------
+INSERT INTO `Disciplina_has_Turma`(`Disciplina_id`, `Turma_id`, `data_inicio`) VALUES 
+(16, 10, '2020-01-27'), 
+(9, 9, '2021-05-05'),
+(14, 8, '2019-11-20'), 
+(4, 7, '2018-05-06'),
+(11, 6, '2017-06-15'),
+(9, 5, '2016-02-15'),
+(8, 4, '2015-03-05'),
+(5, 3, '2014-03-01'),
+(3, 2, '2020-02-05'),
+(1, 1, '2012-01-30');
+
+-- -----------------------------------------------------
+-- Tabela `Professor_has_Turma`
+-- -----------------------------------------------------
+INSERT INTO `Professor_has_Turma`(`Professor_id`, `Turma_id`, `data_inicio`) VALUES 
+(1, 10, '2021-08-22'), 
+(2, 4, '2005-02-01'),
+(3, 3, '2008-12-30'), 
+(4, 5, '2021-01-28'),
+(5, 2, '2011-07-02'),
+(6, 7, '2013-04-05'),
+(7, 1, '2014-02-28'),
+(8, 8, '2013-09-12'),
+(9, 9, '2010-05-05'),
+(10, 6, '2021-11-28');
+
+-- -----------------------------------------------------
+-- Tabela `Escola_has_Curso`
+-- -----------------------------------------------------
+INSERT INTO `Escola_has_Curso`(`Escola_id`, `Curso_id`, `data_inicio`) VALUES 
+(1, 4, '2001-03-25'), 
+(2, 10, '2021-11-30'),
+(3, 3, '2002-12-10'), 
+(4, 5, '2018-01-05'),
+(5, 2, '2014-07-13'),
+(6, 6, '2016-04-15'),
+(7, 9, '2018-02-17'),
+(8, 8, '2019-09-22'),
+(9, 1, '2009-05-01'),
+(10, 7, '1998-10-25');
+
+-- -----------------------------------------------------
+-- Tabela `Curso_has_Professor`
+-- -----------------------------------------------------
+INSERT INTO `Curso_has_Professor`(`Curso_id`, `Professor_id`, `data_inicio`) VALUES 
+(1, 1, '2011-01-27'), 
+(2, 2, '2021-11-26'),
+(3, 3, '2002-12-12'), 
+(4, 4, '2018-10-03'),
+(5, 5, '2014-07-02'),
+(6, 6, '2016-08-15'),
+(7, 7, '2018-06-30'),
+(8, 8, '2019-03-28'),
+(9, 9, '2009-02-01'),
+(10, 10, '1998-12-25');
+
+-- -----------------------------------------------------
+-- Tabela `Disciplina_has_Professor`
+-- -----------------------------------------------------
+INSERT INTO `Disciplina_has_Professor`(`Disciplina_id`, `Professor_id`, `data_inicio`) VALUES 
+(1, 1, '2011-01-27'), 
+(3, 2, '2021-11-26'),
+(5, 3, '2012-12-12'), 
+(8, 4, '2018-10-03'),
+(9, 5, '2014-07-02'),
+(11, 6, '2016-08-15'),
+(4, 7, '2018-06-30'),
+(14, 8, '2019-03-28'),
+(9, 9, '2009-02-01'),
+(16, 10, '2008-12-25');
+
+-- -----------------------------------------------------
+-- Tabela `Curso_has_Turma`
+-- -----------------------------------------------------
+INSERT INTO `Curso_has_Turma`(`Curso_id`, `Turma_id`, `data_inicio`) VALUES 
+(1, 10, '2020-01-27'), 
+(2, 9, '2021-05-05'),
+(3, 8, '2019-11-20'), 
+(4, 7, '2018-05-06'),
+(5, 6, '2017-06-15'),
+(6, 5, '2016-02-15'),
+(7, 4, '2015-03-05'),
+(8, 3, '2014-03-01'),
+(9, 2, '2020-02-05'),
+(10, 1, '2012-01-30');
